@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.btnGetterOnly = new System.Windows.Forms.Button();
+            this.btnUsingStaticMembers = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -45,17 +46,28 @@
             // 
             this.btnGetterOnly.Location = new System.Drawing.Point(15, 40);
             this.btnGetterOnly.Name = "btnGetterOnly";
-            this.btnGetterOnly.Size = new System.Drawing.Size(120, 35);
+            this.btnGetterOnly.Size = new System.Drawing.Size(209, 35);
             this.btnGetterOnly.TabIndex = 1;
-            this.btnGetterOnly.Text = "Getter-only";
+            this.btnGetterOnly.Text = "Getter-only Property";
             this.btnGetterOnly.UseVisualStyleBackColor = true;
             this.btnGetterOnly.Click += new System.EventHandler(this.btnGetterOnly_Click);
+            // 
+            // btnUsingStaticMembers
+            // 
+            this.btnUsingStaticMembers.Location = new System.Drawing.Point(15, 81);
+            this.btnUsingStaticMembers.Name = "btnUsingStaticMembers";
+            this.btnUsingStaticMembers.Size = new System.Drawing.Size(209, 35);
+            this.btnUsingStaticMembers.TabIndex = 2;
+            this.btnUsingStaticMembers.Text = "Using Static Members";
+            this.btnUsingStaticMembers.UseVisualStyleBackColor = true;
+            this.btnUsingStaticMembers.Click += new System.EventHandler(this.btnUsingStaticMembers_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 406);
+            this.Controls.Add(this.btnUsingStaticMembers);
             this.Controls.Add(this.btnGetterOnly);
             this.Controls.Add(this.label1);
             this.Name = "frmMain";
@@ -70,6 +82,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnGetterOnly;
+        private System.Windows.Forms.Button btnUsingStaticMembers;
     }
 }
 
