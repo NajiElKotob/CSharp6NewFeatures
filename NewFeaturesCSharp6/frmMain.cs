@@ -48,6 +48,27 @@ namespace NewFeaturesCSharp6
         {
             Beep.Play();
         }
+
+        /// <summary>
+        /// An interpolated string expression creates a string by replacing the contained expressions 
+        /// with the ToString represenations of the expressions’ results. 
+        /// </summary>
+        /// <remarks>
+        /// Interpolated Strings (C# and Visual Basic Reference) https://msdn.microsoft.com/en-us/library/dn961160.aspx
+        /// </remarks>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnStringInterpolation_Click(object sender, EventArgs e)
+        {
+            var Name = "Naji";
+            var Age = 41;
+            var Id = 5;
+            var now = DateTime.Now;
+
+            MessageBox.Show($"{Name,30} is {Age} year{(Age == 1 ? "" : "s")} old, Id: {Id:D3}");
+            MessageBox.Show($"Hour: {now:hh}, Min: {now:MM}");
+
+        }
     }
 }
 

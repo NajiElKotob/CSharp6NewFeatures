@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnGetterOnly = new System.Windows.Forms.Button();
             this.btnUsingStaticMembers = new System.Windows.Forms.Button();
+            this.btnStringInterpolation = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -62,11 +63,22 @@
             this.btnUsingStaticMembers.UseVisualStyleBackColor = true;
             this.btnUsingStaticMembers.Click += new System.EventHandler(this.btnUsingStaticMembers_Click);
             // 
+            // btnStringInterpolation
+            // 
+            this.btnStringInterpolation.Location = new System.Drawing.Point(15, 122);
+            this.btnStringInterpolation.Name = "btnStringInterpolation";
+            this.btnStringInterpolation.Size = new System.Drawing.Size(209, 35);
+            this.btnStringInterpolation.TabIndex = 3;
+            this.btnStringInterpolation.Text = "String Interpolation";
+            this.btnStringInterpolation.UseVisualStyleBackColor = true;
+            this.btnStringInterpolation.Click += new System.EventHandler(this.btnStringInterpolation_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 406);
+            this.Controls.Add(this.btnStringInterpolation);
             this.Controls.Add(this.btnUsingStaticMembers);
             this.Controls.Add(this.btnGetterOnly);
             this.Controls.Add(this.label1);
@@ -83,6 +95,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnGetterOnly;
         private System.Windows.Forms.Button btnUsingStaticMembers;
+        private System.Windows.Forms.Button btnStringInterpolation;
     }
 }
 
