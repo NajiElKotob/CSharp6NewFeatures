@@ -32,6 +32,7 @@
             this.btnGetterOnly = new System.Windows.Forms.Button();
             this.btnUsingStaticMembers = new System.Windows.Forms.Button();
             this.btnStringInterpolation = new System.Windows.Forms.Button();
+            this.btnExpressionBodiedMembers = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -41,11 +42,11 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(440, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "C# 6.0 adds a lot of useful small features that can clean up your code. ";
+            this.label1.Text = "C# 6.0 adds a lot of small useful features that can clean up your code. ";
             // 
             // btnGetterOnly
             // 
-            this.btnGetterOnly.Location = new System.Drawing.Point(15, 40);
+            this.btnGetterOnly.Location = new System.Drawing.Point(15, 44);
             this.btnGetterOnly.Name = "btnGetterOnly";
             this.btnGetterOnly.Size = new System.Drawing.Size(209, 35);
             this.btnGetterOnly.TabIndex = 1;
@@ -55,7 +56,7 @@
             // 
             // btnUsingStaticMembers
             // 
-            this.btnUsingStaticMembers.Location = new System.Drawing.Point(15, 81);
+            this.btnUsingStaticMembers.Location = new System.Drawing.Point(15, 85);
             this.btnUsingStaticMembers.Name = "btnUsingStaticMembers";
             this.btnUsingStaticMembers.Size = new System.Drawing.Size(209, 35);
             this.btnUsingStaticMembers.TabIndex = 2;
@@ -65,7 +66,7 @@
             // 
             // btnStringInterpolation
             // 
-            this.btnStringInterpolation.Location = new System.Drawing.Point(15, 122);
+            this.btnStringInterpolation.Location = new System.Drawing.Point(15, 126);
             this.btnStringInterpolation.Name = "btnStringInterpolation";
             this.btnStringInterpolation.Size = new System.Drawing.Size(209, 35);
             this.btnStringInterpolation.TabIndex = 3;
@@ -73,11 +74,22 @@
             this.btnStringInterpolation.UseVisualStyleBackColor = true;
             this.btnStringInterpolation.Click += new System.EventHandler(this.btnStringInterpolation_Click);
             // 
+            // btnExpressionBodiedMembers
+            // 
+            this.btnExpressionBodiedMembers.Location = new System.Drawing.Point(243, 44);
+            this.btnExpressionBodiedMembers.Name = "btnExpressionBodiedMembers";
+            this.btnExpressionBodiedMembers.Size = new System.Drawing.Size(209, 35);
+            this.btnExpressionBodiedMembers.TabIndex = 4;
+            this.btnExpressionBodiedMembers.Text = "Expression-bodied members";
+            this.btnExpressionBodiedMembers.UseVisualStyleBackColor = true;
+            this.btnExpressionBodiedMembers.Click += new System.EventHandler(this.btnExpressionBodiedMembers_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(686, 406);
+            this.ClientSize = new System.Drawing.Size(549, 257);
+            this.Controls.Add(this.btnExpressionBodiedMembers);
             this.Controls.Add(this.btnStringInterpolation);
             this.Controls.Add(this.btnUsingStaticMembers);
             this.Controls.Add(this.btnGetterOnly);
@@ -96,6 +108,7 @@
         private System.Windows.Forms.Button btnGetterOnly;
         private System.Windows.Forms.Button btnUsingStaticMembers;
         private System.Windows.Forms.Button btnStringInterpolation;
+        private System.Windows.Forms.Button btnExpressionBodiedMembers;
     }
 }
 

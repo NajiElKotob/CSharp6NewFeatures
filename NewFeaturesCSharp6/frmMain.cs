@@ -69,6 +69,21 @@ namespace NewFeaturesCSharp6
             MessageBox.Show($"Hour: {now:hh}, Min: {now:MM}");
 
         }
+
+        /// <summary>
+        /// Expression-bodied functions/properties use lambda and have no statement body.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnExpressionBodiedMembers_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(this.ToString()); //Expression-bodied functions
+            MessageBox.Show(this.MyProperty); //Expression-bodied properties
+
+        }
+
+        public override string ToString() => $"ToString using Expression-bodied functions";
+        public string MyProperty =>   $"MyProperty using Expression-bodied properties";
     }
 }
 
