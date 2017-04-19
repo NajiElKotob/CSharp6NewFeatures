@@ -83,12 +83,16 @@ namespace NewFeaturesCSharp6
         }
 
         public override string ToString() => $"ToString using Expression-bodied functions";
-        public string MyProperty =>   $"MyProperty using Expression-bodied properties";
+        public string MyProperty => $"MyProperty using Expression-bodied properties";
 
         /// <summary>
         /// Used to test for null before performing a member access (?.) or index (?[) operation. 
         /// </summary>
         /// <remarks>
+        /// Null-conditional Operators https://msdn.microsoft.com/en-us/library/dn986595.aspx
+        /// Null-conditional Operators https://msdn.microsoft.com/en-us/library/dn986595.aspx
+        /// Null-conditional Operators https://msdn.microsoft.com/en-us/library/dn986595.aspx
+        /// Null-conditional Operators https://msdn.microsoft.com/en-us/library/dn986595.aspx
         /// Null-conditional Operators https://msdn.microsoft.com/en-us/library/dn986595.aspx
         /// </remarks>
         /// <param name="sender"></param>
@@ -97,10 +101,38 @@ namespace NewFeaturesCSharp6
         {
             //Category category = new Category() { Name = "MyCategory" };
             Category category = null;
-         
-           // MessageBox.Show($"Name: {category.Name}"); //Error: Object reference not set to an instance of an object.
+
+            // MessageBox.Show($"Name: {category.Name}"); //Error: Object reference not set to an instance of an object.
             MessageBox.Show($"Name: {category?.Name}"); // If ?. Null Then Null
             MessageBox.Show($"Name: {category?.Name ?? "Unspecified"}"); //The ?? operator is called the null-coalescing operator. It returns the left-hand operand if the operand is not null; otherwise it returns the right hand operand https://msdn.microsoft.com/en-us/library/ms173224.aspx
+
+        }
+
+
+        /// <summary>
+        /// Used to obtain the simple (unqualified) string name of a variable, type, or member.
+        /// </summary>
+        /// <remarks>
+        /// nameof (C# and Visual Basic Reference) https://msdn.microsoft.com/en-us/library/dn986596.aspx
+        /// </remarks>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnNameofOperator_Click(object sender, EventArgs e)
+        {
+            Category category = null;
+
+            try
+            {
+                if (category == null)
+                {
+                    throw new NullReferenceException($"The object '{nameof(Category)}' is null");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
 
         }
 
