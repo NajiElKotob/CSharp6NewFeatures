@@ -34,6 +34,8 @@
             this.btnStringInterpolation = new System.Windows.Forms.Button();
             this.btnExpressionBodiedMembers = new System.Windows.Forms.Button();
             this.btnNameofOperator = new System.Windows.Forms.Button();
+            this.btnExceptionFilters = new System.Windows.Forms.Button();
+            this.btnNullConditionalOperators = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -95,13 +97,35 @@
             this.btnNameofOperator.UseVisualStyleBackColor = true;
             this.btnNameofOperator.Click += new System.EventHandler(this.btnNameofOperator_Click);
             // 
+            // btnExceptionFilters
+            // 
+            this.btnExceptionFilters.Location = new System.Drawing.Point(243, 126);
+            this.btnExceptionFilters.Name = "btnExceptionFilters";
+            this.btnExceptionFilters.Size = new System.Drawing.Size(209, 35);
+            this.btnExceptionFilters.TabIndex = 6;
+            this.btnExceptionFilters.Text = "Exception filters";
+            this.btnExceptionFilters.UseVisualStyleBackColor = true;
+            this.btnExceptionFilters.Click += new System.EventHandler(this.btnExceptionFilters_Click);
+            // 
+            // btnNullConditionalOperators
+            // 
+            this.btnNullConditionalOperators.Location = new System.Drawing.Point(15, 167);
+            this.btnNullConditionalOperators.Name = "btnNullConditionalOperators";
+            this.btnNullConditionalOperators.Size = new System.Drawing.Size(209, 35);
+            this.btnNullConditionalOperators.TabIndex = 3;
+            this.btnNullConditionalOperators.Text = "Null-Conditional Operators";
+            this.btnNullConditionalOperators.UseVisualStyleBackColor = true;
+            this.btnNullConditionalOperators.Click += new System.EventHandler(this.btnNullConditionalOperators_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(549, 257);
+            this.Controls.Add(this.btnExceptionFilters);
             this.Controls.Add(this.btnNameofOperator);
             this.Controls.Add(this.btnExpressionBodiedMembers);
+            this.Controls.Add(this.btnNullConditionalOperators);
             this.Controls.Add(this.btnStringInterpolation);
             this.Controls.Add(this.btnUsingStaticMembers);
             this.Controls.Add(this.btnGetterOnly);
@@ -122,6 +146,8 @@
         private System.Windows.Forms.Button btnStringInterpolation;
         private System.Windows.Forms.Button btnExpressionBodiedMembers;
         private System.Windows.Forms.Button btnNameofOperator;
+        private System.Windows.Forms.Button btnExceptionFilters;
+        private System.Windows.Forms.Button btnNullConditionalOperators;
     }
 }
 

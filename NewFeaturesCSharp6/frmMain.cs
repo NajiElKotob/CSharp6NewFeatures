@@ -140,6 +140,34 @@ namespace NewFeaturesCSharp6
         {
             public string Name { get; set; }
         }
+
+        /// <summary>
+        /// When an exception occured, catch block will first try to match type of the exception 
+        /// and then will evaluate when block.
+        /// </summary>
+        /// <remarks>
+        /// try-catch https://msdn.microsoft.com/en-us/library/0yd65esw.aspx
+        /// </remarks>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnExceptionFilters_Click(object sender, EventArgs e)
+        {
+            var code = -1;
+
+            try
+            {
+                throw new ApplicationException();
+            }
+            catch (Exception) when (code == 0)
+            {
+                MessageBox.Show("Error: Code 0");
+            }
+
+            catch (Exception) when (code < 0)
+            {
+                MessageBox.Show("Error: Code < 0");
+            }
+        }
     }
 }
 
